@@ -1,0 +1,1893 @@
+[2023-10-21 18:51:38,649] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-10-21 18:51:51,624] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-10-21 18:54:50,542] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/server_met/zdz/views/document.py", line 974, in station_zdz_data
+    contour,mark = worker.plot_rain()
+  File "/home/liyuan3970/Data/My_Git/server_met/zdz/common/utils/data_class.py", line 2167, in plot_rain
+    wind = self.wind_to_json()
+  File "/home/liyuan3970/Data/My_Git/server_met/zdz/common/utils/data_class.py", line 2157, in wind_to_json
+    data = pd.read_csv("static/data/downfile/min.csv")
+  File "/opt/conda/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: 'static/data/downfile/min.csv'
+[2023-10-21 18:54:50,553] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 148064
+[2023-10-21 18:56:23,874] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-10-21 18:56:37,318] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-10-24 20:12:45,810] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-10-24 20:13:00,978] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 253, in station_zdz_warring
+    worker = data_class.warring_alert(rain_type)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1467, in __init__
+    self.now = self.get_latest()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1485, in get_latest
+    data = pd.read_csv("/workspace/liyuan3970/Data/My_Git/web_met/static/data/downfile/server.csv")
+  File "/opt/conda/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/liyuan3970/Data/My_Git/web_met/static/data/downfile/server.csv'
+[2023-10-24 20:13:00,988] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 147937
+[2023-10-24 20:42:53,119] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-10-24 20:43:05,415] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-10-24 22:16:23,315] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 213, in station_zdz_data
+    worker = data_class.server_plot(time_hours,city,plot_type,js_status,recv_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1002, in __init__
+    self.verify = self.get_city_code()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1006, in get_city_code
+    return target.iloc[0].to_dict()
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexing.py", line 931, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexing.py", line 1566, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexing.py", line 1500, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+[2023-10-24 22:16:23,326] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 106519
+[2023-10-24 22:18:34,163] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 213, in station_zdz_data
+    worker = data_class.server_plot(time_hours,city,plot_type,js_status,recv_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1002, in __init__
+    self.verify = self.get_city_code()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1006, in get_city_code
+    return target.iloc[0].to_dict()
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexing.py", line 931, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexing.py", line 1566, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexing.py", line 1500, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
+[2023-10-24 22:18:34,168] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 106519
+[2023-10-25 20:31:55,927] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-10-25 21:17:24,679] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 242, in station_zdz_warring
+    img = worker.get_radar()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1449, in get_radar
+    img = pickle.loads(self.rs.get("radar"))
+TypeError: a bytes-like object is required, not 'NoneType'
+[2023-10-25 21:17:24,685] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 87309
+[2023-10-25 21:17:29,660] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 242, in station_zdz_warring
+    img = worker.get_radar()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1449, in get_radar
+    img = pickle.loads(self.rs.get("radar"))
+TypeError: a bytes-like object is required, not 'NoneType'
+[2023-10-25 21:17:29,664] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 87309
+[2023-10-25 21:17:34,650] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 242, in station_zdz_warring
+    img = worker.get_radar()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1449, in get_radar
+    img = pickle.loads(self.rs.get("radar"))
+TypeError: a bytes-like object is required, not 'NoneType'
+[2023-10-25 21:17:34,654] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 87309
+[2023-10-25 21:17:39,655] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 242, in station_zdz_warring
+    img = worker.get_radar()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1449, in get_radar
+    img = pickle.loads(self.rs.get("radar"))
+TypeError: a bytes-like object is required, not 'NoneType'
+[2023-10-25 21:17:39,659] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 87309
+[2023-10-27 16:17:31,085] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /index
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 48, in station_zdz
+    return render(request, 'station_zdz.html')
+  File "/opt/conda/lib/python3.7/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/opt/conda/lib/python3.7/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/opt/conda/lib/python3.7/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: station_zdz.html
+[2023-10-27 16:17:31,091] [basehttp.py:161] [basehttp:log_message] [ERROR]- "GET /index HTTP/1.1" 500 94847
+[2023-10-27 17:44:14,934] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-10-27 17:44:46,593] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-10-27 17:44:55,142] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-10-27 17:45:21,430] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 208, in station_zdz_data
+    worker = data_class.server_plot(time_hours,city,plot_type,js_status,recv_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1002, in __init__
+    self.verify = self.get_city_code()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1004, in get_city_code
+    data = pd.read_csv("static/data/city_code.csv")
+  File "/opt/conda/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/opt/conda/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd6 in position 60: invalid continuation byte
+[2023-10-27 17:45:21,436] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 180972
+[2023-10-27 19:54:55,710] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-10-27 20:08:15,759] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /index
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 48, in station_zdz
+    return render(request, 'station_zdz.html')
+  File "/opt/conda/lib/python3.7/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/opt/conda/lib/python3.7/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/opt/conda/lib/python3.7/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: station_zdz.html
+[2023-10-27 20:08:15,763] [basehttp.py:161] [basehttp:log_message] [ERROR]- "GET /index HTTP/1.1" 500 94847
+[2023-10-29 10:36:59,617] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 130, in station_zdz_data
+    geojson,hours = worker.plot_rain(plot_type,plot_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 764, in plot_rain
+    contour = plt.contourf(lons,lats,data_xr,cmap=cmaps,levels = norm)
+NameError: name 'cmaps' is not defined
+[2023-10-29 10:36:59,625] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 270998
+[2023-10-29 10:38:02,290] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 130, in station_zdz_data
+    geojson,hours = worker.plot_rain(plot_type,plot_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 764, in plot_rain
+    contour = plt.contourf(lons,lats,data_xr,cmap=cmap_nonlin,levels = norm)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/pyplot.py", line 2530, in contourf
+    **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/__init__.py", line 1601, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/axes/_axes.py", line 6422, in contourf
+    contours = mcontour.QuadContourSet(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 855, in __init__
+    kwargs = self._process_args(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 1456, in _process_args
+    x, y, z = self._contour_args(args, kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 1527, in _contour_args
+    self._contour_level_args(z, args)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 1197, in _contour_level_args
+    self.levels = np.asarray(levels_arg).astype(np.float64)
+TypeError: float() argument must be a string or a number, not 'BoundaryNorm'
+[2023-10-29 10:38:02,297] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 313854
+[2023-10-29 10:41:29,452] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 130, in station_zdz_data
+    geojson,hours = worker.plot_rain(plot_type,plot_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 764, in plot_rain
+    contour = plt.contourf(lons,lats,data_xr,cmap=cmap_nonlin,levels = norm)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/pyplot.py", line 2530, in contourf
+    **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/__init__.py", line 1601, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/axes/_axes.py", line 6422, in contourf
+    contours = mcontour.QuadContourSet(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 855, in __init__
+    kwargs = self._process_args(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 1456, in _process_args
+    x, y, z = self._contour_args(args, kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 1527, in _contour_args
+    self._contour_level_args(z, args)
+  File "/opt/conda/lib/python3.7/site-packages/matplotlib/contour.py", line 1197, in _contour_level_args
+    self.levels = np.asarray(levels_arg).astype(np.float64)
+TypeError: float() argument must be a string or a number, not 'BoundaryNorm'
+[2023-10-29 10:41:29,458] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 313854
+[2023-10-29 15:55:12,336] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 130, in station_zdz_data
+    geojson,hours = worker.plot_rain(plot_type,plot_data)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 780, in plot_rain
+    contour = plt.contourf(lons,lats,data_xr,cmap=cmap_nonlin,levels =levels,norm =norm)
+NameError: name 'no' is not defined
+[2023-10-29 15:55:12,345] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 511444
+[2023-10-29 16:48:59,169] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 239, in station_zdz_warring
+    rain_data,wind_data,tmax_data,tmin_data,view_data = worker.warring_data()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1461, in warring_data
+    return rain_data,wind_data,view_data
+NameError: name 'tmax_data' is not defined
+[2023-10-29 16:48:59,180] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 104922
+[2023-10-29 16:49:04,322] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 239, in station_zdz_warring
+    rain_data,wind_data,tmax_data,tmin_data,view_data = worker.warring_data()
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1461, in warring_data
+    return rain_data,wind_data,view_data
+NameError: name 'tmax_data' is not defined
+[2023-10-29 16:49:04,345] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 104922
+[2023-10-29 16:49:19,361] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 239, in station_zdz_warring
+    rain_data,wind_data,tmax_data,tmin_data,view_data = worker.warring_data()
+ValueError: not enough values to unpack (expected 5, got 3)
+[2023-10-29 16:49:19,396] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 87411
+[2023-10-29 16:49:24,307] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 239, in station_zdz_warring
+    rain_data,wind_data,tmax_data,tmin_data,view_data = worker.warring_data()
+ValueError: not enough values to unpack (expected 5, got 3)
+[2023-10-29 16:49:24,319] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_warring HTTP/1.1" 500 87411
+[2023-10-29 17:25:28,602] [custom_exception_handler.py:34] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-10-29 20:58:00,299] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 296, in get_regin
+    boundary_data =  boundary_data[(boundary_data['Station_Id_C'] in ['K8218','K8301'] )|(boundary_data['Station_levl']==11)| (boundary_data['Station_levl']==15)| (boundary_data['Station_levl']==12)| (boundary_data['Station_levl']==13)| (boundary_data['Station_levl']==16)]
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/generic.py", line 1538, in __nonzero__
+    f"The truth value of a {type(self).__name__} is ambiguous. "
+ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-29 20:58:00,311] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98701
+[2023-10-29 20:58:25,769] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 296, in get_regin
+    boundary_data =  boundary_data[(boundary_data['Station_Id_C'] in ['K8218','K8301'] )|(boundary_data['Station_levl']==11)| (boundary_data['Station_levl']==15)| (boundary_data['Station_levl']==12)| (boundary_data['Station_levl']==13)| (boundary_data['Station_levl']==16)]
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/generic.py", line 1538, in __nonzero__
+    f"The truth value of a {type(self).__name__} is ambiguous. "
+ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-29 20:58:25,803] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98701
+[2023-10-29 21:13:32,314] [log.py:230] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'VIS_HOR_1MI'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/opt/conda/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/liyuan3970/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 315, in get_regin
+    remain = boundary_data[(boundary_data['VIS_HOR_1MI']<=500)|(boundary_data['Station_levl']==11)| (boundary_data['Station_levl']==15)| (boundary_data['Station_levl']==12)| (boundary_data['Station_levl']==13)| (boundary_data['Station_levl']==16)]
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/opt/conda/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'VIS_HOR_1MI'
+[2023-10-29 21:13:32,327] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 164691
+[2023-10-31 18:55:41,390] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 97, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1331, in get_regin
+    boundary_data = self.get_rain(boundary,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1376, in get_rain
+    client = DataQueryClient(configFile=r"/home/workspace/Data/My_Git/web_met/bak/zdz/common/utils/client.config")
+NameError: name 'DataQueryClient' is not defined
+[2023-10-31 18:55:41,392] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 87226
+[2023-10-31 18:58:44,340] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 221, in station_zdz_data
+    geojson,wind_json = worker.plot_rain()
+TypeError: plot_rain() missing 1 required positional argument: 'times'
+[2023-10-31 18:58:44,342] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74527
+[2023-10-31 19:06:21,220] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 221, in station_zdz_data
+    geojson,wind_json = worker.plot_rain()
+TypeError: plot_rain() missing 1 required positional argument: 'times'
+[2023-10-31 19:06:21,221] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74527
+[2023-10-31 19:09:27,736] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 127, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(value,station_id)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1580, in single_station
+    data = self.single_data(value,station_id,plot_range)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1529, in single_data
+    client = DataQueryClient(configFile = r"/home/workspace/Data/My_Git/web_met/zdz/common/utils/client.config")
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/cma/music/DataQueryClient.py", line 48, in __init__
+    raise RuntimeError("config file is not exist.")
+RuntimeError: config file is not exist.
+[2023-10-31 19:09:27,738] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 90310
+[2023-10-31 20:00:54,954] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 441, in get_regin
+    data = self.sql_hours(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 310, in sql_hours
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:00:54,956] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98098
+[2023-10-31 20:04:52,137] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 441, in get_regin
+    data = self.sql_hours(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 310, in sql_hours
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:04:52,138] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98092
+[2023-10-31 20:07:38,931] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 441, in get_regin
+    data = self.sql_hours(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 310, in sql_hours
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:07:38,932] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98093
+[2023-10-31 20:14:55,018] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 442, in get_regin
+    data = self.sql_hours(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 310, in sql_hours
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:14:55,023] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98099
+[2023-10-31 20:15:37,509] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 442, in get_regin
+    data = self.sql_hours(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 310, in sql_hours
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:15:37,510] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98094
+[2023-10-31 20:16:12,148] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 425, in get_regin
+    data = self.sql_range(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 373, in sql_range
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:16:12,149] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98261
+[2023-10-31 20:18:13,908] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 80, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 442, in get_regin
+    data = self.sql_hours(boundary,value_index,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 310, in sql_hours
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 20:18:13,909] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 98093
+[2023-10-31 20:38:40,932] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 236, in station_zdz_data
+    city = int(button_value)
+ValueError: invalid literal for int() with base 10: 'taizhou'
+[2023-10-31 20:38:40,934] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74425
+[2023-10-31 21:00:55,430] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 200, in station_zdz_data
+    worker = data_class.radar_data()
+AttributeError: module 'zdz.common.utils.data_class' has no attribute 'radar_data'
+[2023-10-31 21:00:55,431] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74860
+[2023-10-31 21:11:59,174] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 246, in station_zdz_data
+    contour,mark = worker.plot_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1995, in plot_rain
+    wind = self.wind_to_json()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 1977, in wind_to_json
+    data['WIN_S_Gust_Max'] = data.apply(lambda x: (x.wind - int(str(int(x.wind))[-3:]))/10000, axis = 1)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3970, in __setitem__
+    self._set_item_frame_value(key, value)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 4125, in _set_item_frame_value
+    raise ValueError(
+ValueError: Cannot set a DataFrame with multiple columns to the single column WIN_S_Gust_Max
+[2023-10-31 21:11:59,177] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 95964
+[2023-10-31 21:13:42,973] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 144, in station_zdz_data
+    city_code = int(click_type)
+ValueError: invalid literal for int() with base 10: '台州市'
+[2023-10-31 21:13:42,974] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74675
+[2023-10-31 21:19:24,472] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 144, in station_zdz_data
+    city_code = int(click_type)
+ValueError: invalid literal for int() with base 10: '台州市'
+[2023-10-31 21:19:24,473] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74675
+[2023-10-31 21:21:29,868] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 144, in station_zdz_data
+    city_code = int(click_type)
+ValueError: invalid literal for int() with base 10: '台州市'
+[2023-10-31 21:21:29,869] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 74675
+[2023-10-31 21:24:14,194] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 182, in station_zdz_data
+    worker = data_class.station_text(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 500, in __init__
+    self.data = self.comput_city(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 530, in comput_city
+    data = pd.DataFrame(result_json['DS'],columns=clomns)
+KeyError: 'DS'
+[2023-10-31 21:24:14,203] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 151114
+[2023-10-31 21:25:30,501] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 182, in station_zdz_data
+    worker = data_class.station_text(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 500, in __init__
+    self.data = self.comput_city(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 530, in comput_city
+    data = pd.DataFrame(result_json['DS'],columns=clomns)
+KeyError: 'DS'
+[2023-10-31 21:25:30,502] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 148653
+[2023-10-31 21:35:25,508] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 183, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.remain(rain_data,wind_data,tmax_data,view_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 911, in remain
+    text_rain,rain_json = self.text_rain(plot_rain)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 815, in text_rain
+    rain_hours_max = self.get_rain_max()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 716, in get_rain_max
+    date_start = dtt.datetime.strptime(self.start,'%Y-%m-%d %H:%M:%S')
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data 'extra_geojosn_remain' does not match format '%Y-%m-%d %H:%M:%S'
+[2023-10-31 21:35:25,520] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 212894
+[2023-10-31 21:37:00,256] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 183, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.remain(rain_data,wind_data,tmax_data,view_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 911, in remain
+    text_rain,rain_json = self.text_rain(plot_rain)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 816, in text_rain
+    if max(rain_hours_max['PRE'])>0.1:
+ValueError: max() arg is an empty sequence
+[2023-10-31 21:37:00,265] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 199115
+[2023-10-31 21:41:01,200] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 909, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 819, in text_rain
+    if rain_hours_max:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:41:01,202] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129635
+[2023-10-31 21:41:34,225] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 909, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 819, in text_rain
+    if rain_hours_max:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:41:34,246] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129635
+[2023-10-31 21:43:21,102] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 909, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 819, in text_rain
+    if rain_hours_max!='none':
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:43:21,106] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129585
+[2023-10-31 21:43:43,726] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 909, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 819, in text_rain
+    if rain_hours_max!='none':
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:43:43,729] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129585
+[2023-10-31 21:44:51,653] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 909, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 819, in text_rain
+    if rain_hours_max:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:44:51,657] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129635
+[2023-10-31 21:46:11,743] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 910, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 820, in text_rain
+    if rain_hours_max:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:46:11,746] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129616
+[2023-10-31 21:47:13,461] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 911, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 821, in text_rain
+    if rain_hours_max:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:47:13,464] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129615
+[2023-10-31 21:48:04,511] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 183, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.remain(rain_data,wind_data,tmax_data,view_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 919, in remain
+    text_rain,rain_json = self.text_rain(plot_rain)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 821, in text_rain
+    if len(rain_hours_max)>0:
+TypeError: object of type 'NoneType' has no len()
+[2023-10-31 21:48:04,523] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 199086
+[2023-10-31 21:49:07,349] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 911, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 821, in text_rain
+    if rain_hours_max!=None>0:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:49:07,353] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129551
+[2023-10-31 21:49:35,595] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 146, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.main()
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 911, in main
+    text_rain,rain_json = self.text_rain(plot_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 821, in text_rain
+    if rain_hours_max!=None:
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/generic.py", line 1527, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+[2023-10-31 21:49:35,598] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 129541
+[2023-10-31 21:51:11,534] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 146, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index_class_helper.pxi", line 20, in pandas._libs.index.Float64Engine._check_type
+KeyError: 'wind'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 183, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.remain(rain_data,wind_data,tmax_data,view_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 919, in remain
+    text_wind,wind_json = self.text_wind(plot_wind)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 556, in text_wind
+    wind['rank']=pd.cut(wind['wind'],bins,right=False,labels=labels)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'wind'
+[2023-10-31 21:51:11,550] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 226314
+[2023-10-31 21:57:17,381] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 146, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index_class_helper.pxi", line 20, in pandas._libs.index.Float64Engine._check_type
+KeyError: 'view'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 183, in station_zdz_data
+    text,rain_json,wind_json,tmax_json,view_json = worker.remain(rain_data,wind_data,tmax_data,view_data)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 921, in remain
+    text_view,view_json = self.text_view(plot_view)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/common/utils/data_class.py", line 634, in text_view
+    view['rank']=pd.cut(view['view'],bins,right=False,labels=labels)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'view'
+[2023-10-31 21:57:17,423] [basehttp.py:161] [basehttp:log_message] [ERROR]- "POST /station_zdz_data HTTP/1.1" 500 283269
+[2023-10-31 23:12:14,745] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /index
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/zdz/views/document.py", line 48, in station_zdz
+    return render(request, 'station_zdz.html')
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: station_zdz.html
+[2023-10-31 23:12:14,746] [basehttp.py:161] [basehttp:log_message] [ERROR]- "GET /index HTTP/1.1" 500 84545
+[2023-10-31 23:27:43,015] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /index
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 48, in station_zdz
+    return render(request, 'station_zdz.html')
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: station_zdz.html
+[2023-10-31 23:54:59,025] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(station)
+TypeError: single_station() missing 2 required positional arguments: 'station_id' and 'plot_time'
+[2023-10-31 23:55:17,643] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view zdz.views.document.station_zdz_data didn't return an HttpResponse object. It returned None instead.
+[2023-10-31 23:55:59,792] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(station)
+TypeError: single_station() missing 2 required positional arguments: 'station_id' and 'plot_time'
+[2023-11-01 08:25:38,703] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 100, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1353, in get_regin
+    conn.commit()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1414, in get_rain
+    interfaceId = "getSurfEleInRectByTime"
+KeyError: 'DS'
+[2023-11-01 09:52:57,751] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(station)
+TypeError: single_station() missing 2 required positional arguments: 'station_id' and 'plot_time'
+[2023-11-01 09:53:03,171] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view zdz.views.document.station_zdz_data didn't return an HttpResponse object. It returned None instead.
+[2023-11-01 10:07:47,409] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(station)
+TypeError: single_station() missing 2 required positional arguments: 'station_id' and 'plot_time'
+[2023-11-01 10:10:54,816] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(value,station_id,plot_time)
+TypeError: single_station() missing 2 required positional arguments: 'station_id' and 'plot_time'
+[2023-11-01 10:11:23,012] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(value,station_id,plot_time)
+TypeError: single_station() missing 2 required positional arguments: 'station_id' and 'plot_time'
+[2023-11-01 10:14:25,239] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(value,station_id,plot_time)
+UnboundLocalError: local variable 'value' referenced before assignment
+[2023-11-01 10:16:41,337] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(plot_type,station_id,plot_time)
+UnboundLocalError: local variable 'station_id' referenced before assignment
+[2023-11-01 10:20:24,502] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 115, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(plot_type,station,plot_time)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 161, in single_station
+    data = self.single_data(value,station_id,plot_range)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 89, in single_data
+    client = DataQueryClient(configFile = r"/home/workspace/Data/My_Git/web_met/zdz/common/utils/client.config")
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/cma/music/DataQueryClient.py", line 48, in __init__
+    raise RuntimeError("config file is not exist.")
+RuntimeError: config file is not exist.
+[2023-11-01 18:02:12,191] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:02:36,318] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:03:06,251] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:03:36,270] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:04:06,182] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:04:36,131] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:05:06,165] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:05:36,162] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:06:06,179] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:06:39,293] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:07:06,146] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:07:36,082] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:08:06,019] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:08:36,181] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:09:05,906] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:09:36,060] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:10:05,943] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:10:35,926] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:11:05,926] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:11:35,958] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:12:05,874] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:12:35,847] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:13:05,937] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:13:36,014] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:14:05,811] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:14:35,848] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:15:05,905] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:15:35,811] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:16:05,767] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:16:35,753] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 18:17:05,852] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 19:21:10,304] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 19:21:40,136] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 19:22:10,253] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 19:22:40,102] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-01 19:23:10,201] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_warring
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 284, in station_zdz_warring
+    rain_data,wind_data,view_data = worker.warring_data()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2396, in warring_data
+    rain = self.get_rain()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2371, in get_rain
+    value = self.rs.get(rain_dir[self.rain_type])
+KeyError: '10min'
+[2023-11-02 07:11:43,474] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 236, in station_zdz_data
+    city = int(button_value)
+ValueError: invalid literal for int() with base 10: 'taizhou'
+[2023-11-02 07:12:19,549] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 236, in station_zdz_data
+    city = int(button_value)
+ValueError: invalid literal for int() with base 10: 'taizhou'
+[2023-11-02 07:35:40,017] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 236, in station_zdz_data
+    city = int(button_value)
+ValueError: invalid literal for int() with base 10: 'taizhou'
+[2023-11-02 07:38:18,085] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 236, in station_zdz_data
+    city = int(button_value)
+ValueError: invalid literal for int() with base 10: 'taizhou'
+[2023-11-02 07:39:11,032] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 257, in station_zdz_data
+    geojson,text,wind_json = worker.return_province()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 2185, in return_province
+    data = self.rain_from_cloud()
+AttributeError: 'server_plot' object has no attribute 'rain_from_cloud'
+[2023-11-02 07:39:15,537] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view zdz.views.document.station_zdz_data didn't return an HttpResponse object. It returned None instead.
+[2023-11-05 14:00:52,660] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 100, in station_zdz_data
+    data = worker.get_regin(boundary,table_type,tables_name,value_index,zoom)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1373, in get_regin
+    boundary_data = self.get_rain(boundary,tables_name)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1432, in get_rain
+    result_json = json.loads(result)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2023-11-08 20:27:06,064] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-11-08 20:27:13,968] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-11-08 20:27:27,982] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-11-08 20:27:44,131] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-11-08 20:27:51,109] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-11-08 20:27:57,863] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-11-08 22:26:23,079] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 500, 'err_msg': '服务器内部错误', 'exec': FileNotFoundError(2, 'No such file or directory')}
+[2023-11-08 22:37:02,927] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-11-08 22:37:06,228] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2000, 'err_msg': '账号不存在', 'exec': BusinessException(<ResponseCodeEnum.ACCOUNT_NOT_EXISTED: (2000, '账号不存在', 'account not existed')>)}
+[2023-11-08 22:37:14,193] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-11-08 22:37:17,369] [custom_exception_handler.py:31] [custom_exception_handler:custom_exception_handler] [ERROR]- {'code': 2001, 'err_msg': '密码错误', 'exec': BusinessException(<ResponseCodeEnum.PASSWORD_ERROR: (2001, '密码错误', 'password error')>)}
+[2023-11-10 09:57:53,437] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 269, in station_zdz_data
+    data = worker.return_daily_var()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1870, in return_daily_var
+    today = self.comput_va(path,onefile)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1846, in comput_va
+    "fy":round(max(speedlist),2),
+ValueError: max() arg is an empty sequence
+[2023-11-10 09:58:33,233] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 269, in station_zdz_data
+    data = worker.return_daily_var()
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1870, in return_daily_var
+    today = self.comput_va(path,onefile)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1846, in comput_va
+    "fy":round(max(speedlist),2),
+ValueError: max() arg is an empty sequence
+[2023-11-14 11:29:49,460] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 130, in station_zdz_data
+    nowdata,history,windhis,windnow = worker.single_station(value,station_id)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1614, in single_station
+    data = self.single_data(value,station_id,plot_range)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 1603, in single_data
+    data = pd.DataFrame(result_json['DS'],columns=clomns)
+KeyError: 'DS'
+[2023-11-15 10:18:04,727] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /station_zdz_data
+Traceback (most recent call last):
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/workspace/anaconda3/envs/met_dev/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/views/document.py", line 145, in station_zdz_data
+    worker = data_class.station_text(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 514, in __init__
+    self.data = self.data_status(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 520, in data_status
+    data = self.comput_city(city_code,start,end)
+  File "/home/workspace/Data/My_Git/web_met/server_met/./zdz/common/utils/data_class.py", line 550, in comput_city
+    data = pd.DataFrame(result_json['DS'],columns=clomns)
+KeyError: 'DS'
